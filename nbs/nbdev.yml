@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev-test-project"
+  site-url: "https://stepetal.github.io/nbdev-test-project"
+  description: "Template project with usage of nbdev library"
+  repo-branch: master
+  repo-url: "https://github.com/stepetal/nbdev-test-project"
