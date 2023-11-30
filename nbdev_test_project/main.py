@@ -14,7 +14,7 @@ from .graph import Graph as Graph
 from .plot import SimplePlot as MyPlot
 
 # %% ../nbs/03_main.ipynb 6
-X = np.arange(0, math.pi * 2, 0.001)
+X = np.arange(0, math.pi * 8, 0.01)
 Y1 = np.sin(X)
 Y2 = np.cos(X)
 Y3 = np.tan(X)

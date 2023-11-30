@@ -5,11 +5,12 @@ __all__ = ['Graph']
 
 # %% ../nbs/01_graph.ipynb 4
 class Graph:
-    "Simple graph"
+    "2d representation of some function"
     def __init__(self,
-                 x:float,
-                 y:float,
-                 name:str):
+                 x:float, # independent variable
+                 y:float, # independent variable
+                 name:str # graph name
+                ): 
         self.x, self.y, self.name = x, y, name
     def get_x(self):
         return self.x

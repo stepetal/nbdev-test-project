@@ -5,18 +5,50 @@
 ## How to use
 
 ``` python
+import matplotlib.pyplot as plt
+import numpy as np
+import math
+from nbdev_test_project.graph import Graph as Graph
+from nbdev_test_project.plot import SimplePlot as MyPlot
+import ipywidgets as widgets
+```
+
+### Plot one graph
+
+``` python
 X = np.arange(0, math.pi * 8, 0.01)
 Y1 = np.sin(X)
-plot = MyPlot()
+plot = MyPlot(plt, 1, 1, (6, 4))
 graph = Graph(X, Y1, "Sine")
 plot.add_graph(graph)
-plot.set_plot(plt)
 plot.plot_first_graph()
 ```
 
-![](index_files/figure-commonmark/cell-2-output-1.png)
+![](index_files/figure-commonmark/cell-3-output-1.png)
+
+### Plot serveral graphs
+
+``` python
+X = np.arange(0, math.pi * 8, 0.01)
+Y1 = np.sin(X)
+Y2 = np.cos(X)
+Y3 = np.tan(X)
+plot = MyPlot(plt, 2,2, (12, 7))
+plot.add_graph(Graph(X, Y1, "Sine"))
+plot.add_graph(Graph(X, Y2, "Cosine"))
+plot.add_graph(Graph(X, Y3, "Tangent"))
+plot.plot_all_graphs()
+```
+
+![](index_files/figure-commonmark/cell-4-output-1.png)
 
 ## Interactive demo
+
+> Attention! only works in jupyter lab/notebook. Docks in github pages
+> will show only the result of exported action althoug it is possible to
+> change elements in the dropbox. See discussion
+> https://github.com/quarto-dev/quarto-cli/discussions/6496
+> (particularly the answer from the person with nickname ‘cscheid’)
 
 ``` python
 def plotGraph(x, y, name):

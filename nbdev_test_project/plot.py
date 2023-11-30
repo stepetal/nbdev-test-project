@@ -3,15 +3,36 @@
 # %% auto 0
 __all__ = ['SimplePlot']
 
-# %% ../nbs/02_plot.ipynb 4
+# %% ../nbs/02_plot.ipynb 3
 class SimplePlot:
-    def __init__(self):
-        self.graph_list = []
-    def set_plot(self, plot):
+    "Simple plot for drawing graphs with type nbdev_test_project.graph"
+    def __init__(self, 
+                 plot, # plot for drawing graphs (matplotlib.pyplot)
+                 n_rows = 1, # number of rows in plot
+                 n_cols = 1, # number of rows in plot
+                 size_of_plot = (10,4) # size of plot in inches (width, height)
+                 ):
+        self.size_of_plot = size_of_plot
+        self.rows = n_rows
+        self.cols = n_cols
         self.plt = plot
+        self.graph_list = []
     def add_graph(self, graph):
         self.graph_list.append(graph)
+    def get_number_of_graphs(self):
+        return len(self.graph_list)
+    def get_number_of_rows(self):
+        return self.rows
+    def get_number_of_cols(self):
+        return self.cols
     def plot_first_graph(self):
         if len(self.graph_list) != 0:
             self.plt.suptitle(self.graph_list[0].get_name())
             self.plt.plot(self.graph_list[0].get_x(),self.graph_list[0].get_y())
+    def plot_all_graphs(self):
+        self.plt.figure(figsize = self.size_of_plot)
+        for idx, graph in enumerate(self.graph_list):
+            self.plt.subplot(self.rows, self.cols, idx + 1)
+            self.plt.plot(graph.get_x(), graph.get_y())
+            self.plt.title(graph.get_name())
+        
