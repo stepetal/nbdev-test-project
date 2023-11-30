@@ -4,4 +4,3 @@ website:
       - index.ipynb
       - 01_graph.ipynb
       - 02_plot.ipynb
-      - 03_main.ipynb

@@ -52,7 +52,7 @@ plot.plot_all_graphs()
 
 ``` python
 def plotGraph(x, y, name):
-    plot = MyPlot()
+    plot = MyPlot(plt, 1, 1, (6, 4))
     graph = Graph(x, y, name)
     plot.add_graph(graph)
     plot.set_plot(plt)
