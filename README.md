@@ -4,17 +4,17 @@
 
 ## Getting started
 
-Nbdev library tutorial: https://nbdev.fast.ai/tutorials/tutorial.html
+Nbdev library tutorial: <https://nbdev.fast.ai/tutorials/tutorial.html>
 <br> Windows support is partial (see Install section in nbdev library
 description) <br> To develop this project Ubuntu 22.04 LTS was used <br>
 
-Very simplified workflow to create nbdev project 1) Create repository in
-Github and enable github pages in repository settings 2) Clone
-repository to specified directory 3) Create venv and install nbdev
-package 4) Initialize nbdev repository with help of command: ndev_new 5)
-Make some changes 6) Export files with nbdev_export 7) Create docs (and
-also update readme file) with command nbdev_docs 8) Add all necessary
-files (inlcuding .github) to index and make comming 9) Push changes 10)
+Very simplified workflow to create nbdev project 1. Create repository in
+Github and enable github pages in repository settings 2. Clone
+repository to specified directory 3. Create venv and install nbdev
+package 4. Initialize nbdev repository with help of command: ndev_new 5.
+Make some changes 6. Export files with nbdev_export 7. Create docs (and
+also update readme file) with command nbdev_docs 8. Add all necessary
+files (inlcuding .github) to index and make comming 9. Push changes 10.
 See deployment process in Actions tab
 
 ## How to use
